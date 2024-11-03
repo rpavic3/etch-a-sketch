@@ -25,12 +25,7 @@ function createGrid(num) {
 
 
 
-        squares.forEach(square => {
-            square.addEventListener("mouseover", () => {
-                square.style.backgroundColor = "black"
-            })
-    
-        });
+        
     }
     
 }
@@ -46,9 +41,8 @@ const squares = document.querySelectorAll(".square")
 
 
 
-squares.forEach(square => {
-    square.addEventListener("mouseover", () => {
-        square.style.backgroundColor = "black"
-    })
-    
+cont.addEventListener("mouseover", (e) => {
+    if (e.target.classList.contains("square")) {  // "Are you trying to enter a room?"
+        e.target.style.backgroundColor = "black";
+    }
 });
